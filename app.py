@@ -1,0 +1,1 @@
+print("q tranza soy un oso")
