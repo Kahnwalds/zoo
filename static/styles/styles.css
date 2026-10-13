@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap');
+
+:root {
+    --papel: #f1e8dc;
+    --tinta: #1a1a1a;
+    --azul: #9ecbe8;
+    --verde: #c3e0a0;
+    --rosa: #f0c4d8;
+    --naranja: #f5bd94;
+    --amarillo: #f0dc9c;
+    --lila: #b9bcea;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+    margin: 0;
+    padding: 32px;
+    color: var(--tinta);
+    background-color: var(--papel);
+    background-image:
+        radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 18px 18px, 29px 29px;
+    background-position: 0 0, 9px 9px;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 8px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0 0 32px;
+}
+
+/* Tabla con look de tarjetas */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 16px;
+}
+
+thead th {
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+}
+
+tbody tr {
+    --color: var(--azul);
+}
+
+tbody tr:nth-child(6n+1) { --color: var(--azul); }
+tbody tr:nth-child(6n+2) { --color: var(--verde); }
+tbody tr:nth-child(6n+3) { --color: var(--rosa); }
+tbody tr:nth-child(6n+4) { --color: var(--naranja); }
+tbody tr:nth-child(6n+5) { --color: var(--amarillo); }
+tbody tr:nth-child(6n+6) { --color: var(--lila); }
+
+tbody td {
+    background: var(--color);
+    padding: 14px 16px;
+    border-top: 2px solid var(--tinta);
+    border-bottom: 2px solid var(--tinta);
+}
+
+tbody td:first-child {
+    border-left: 2px solid var(--tinta);
+    border-radius: 18px 0 0 18px;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+}
+
+tbody td:last-child {
+    border-right: 2px solid var(--tinta);
+    border-radius: 0 18px 18px 0;
+}
+
+tbody tr {
+    filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.75));
+    transition: transform 0.15s;
+}
+
+tbody tr:hover {
+    transform: translate(-2px, -2px) rotate(-0.4deg);
+}
+
+td img {
+    display: block;
+    border: 2px solid var(--tinta);
+    border-radius: 12px;
+    object-fit: cover;
+    background: white;
+}
